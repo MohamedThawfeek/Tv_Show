@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV Maze</title>
+    <link rel="icon" href="./assets/ico/favicon.ico" type="image/x-icon" />
+
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/page.css" />
+    <!-- bootsrap css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav>
+      <select class="showSlector" onchange="location = this.value ">
+        <option value="#" id="#" selected>&nbsp;&nbsp;Select Show</option>
+      </select>
+      <!--  -->
+      <button class="btn navBtn">
+        <a href="./">
+          <i class="fas fa-caret-left fa-3x"></i>
+        </a>
+      </button>
+
+      <select id="selector" onchange="location = this.value">
+        <option value="#" selected>&nbsp;&nbsp;Select Episode</option>
+      </select>
+
+      <input
+        type="text"
+        id="searchInput"
+        class="searchInput"
+        placeholder="  Search any movies..."
+      />
+      <h5 class="display"></h5>
+    </nav>
+    <br />
+    <br />
+    <br />
+
+    <div class="showName btn-primary"></div>
+    <div id="showsContainer" class="container_ epiContainer_">
+      <img class="img1_" src="./assets/img/blob (1).svg" />
+      <img class="img2_" src="./assets/img/blob.svg" />
+      <img class="img3_" src="./assets/img/blob.svg" />
+    </div>
+
+    <img src="./assets/img/load.gif" alt="loading..." class="loading" />
+
+    <script>
+      function isHidden(el) {
+        var style = window.getComputedStyle(el);
+        return style.display === "none" || style.visibility === "hidden";
+      }
+    </script>
+
+    <!-- search -->
+    <script src="./search_2.js"></script>
+    <script src="./search_1.js"></script>
+    <!-- script -->
+    <script src="./script_1.js"></script>
+    <script src="./script_2.js"></script>
+  </body>
+</html>
